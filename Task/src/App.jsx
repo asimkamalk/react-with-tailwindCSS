@@ -51,7 +51,7 @@ const Box = (props) => {
       style={{
         backgroundColor: bgColor,
         color: textColor,
-        fontSize: "40px",
+        fontSize: large ? "40px" : "12px",
       }}
     >
       {label}
@@ -83,7 +83,18 @@ function App() {
         textColor="White"
         large={true}
       />
-      {/* <Box label="another one" bgColor="lavender" textColor="purple" /> */}
+      <Box
+        label="another one"
+        bgColor="lavender"
+        textColor="purple"
+        large={false}
+      />
+      <Box
+        label="green stuff"
+        bgColor="green"
+        textColor="white"
+        large={false}
+      />
     </>
   );
 }
