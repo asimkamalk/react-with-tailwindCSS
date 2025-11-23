@@ -1,3 +1,5 @@
+import MyComponent from "./MyComponent";
+
 const obj = {
   name: "Asim",
   occu: "Learner",
@@ -89,12 +91,16 @@ function App() {
         textColor="purple"
         large={false}
       />
-      <Box
-        label="green stuff"
-        bgColor="green"
-        textColor="white"
-        large={false}
-      />
+      <Box label="green stuff" bgColor="green" textColor="white" />
+      <br />
+      <br />
+      <br />
+      <MyComponent bgColor="yellow" height={90}>
+        Hello!
+      </MyComponent>
+      <MyComponent bgColor="lavender" height={40}>
+        Good Bye
+      </MyComponent>
     </>
   );
 }
