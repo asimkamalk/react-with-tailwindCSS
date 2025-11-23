@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+const obj = {
+  name: "Asim",
+  occu: "Learner",
+};
 
-function App() {
-  const [count, setCount] = useState(0)
+const { name, occu } = obj;
+console.log(name);
+console.log(occu);
+
+const Message = (props) => {
+  const { text, bgColor } = props;
+  console.log(text, bgColor);
 
   return (
+    <div
+      style={{
+        background: bgColor,
+      }}
+    >
+      {text}
+    </div>
+  );
+};
+
+const Title = () => {
+  // console.log("Running title");
+
+  return <div>hello world</div>;
+};
+
+const Description = () => {
+  // console.log("Running description");
+
+  return <div>This is my second react compoenent</div>;
+};
+
+function App() {
+  return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Title />
+      <Title />
+      <Title />
+      <Description />
+      <Message text="this is my first prop" bgColor="red" />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
