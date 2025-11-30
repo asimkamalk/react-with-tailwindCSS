@@ -1,4 +1,8 @@
 // import MyComponent from "./MyComponent";
+// TailwindCSS
+import TailwindPrac from "./TailwindPrac";
+// Buttons
+import Buttons from "./Buttons";
 
 // const obj = {
 //   name: "Asim",
@@ -61,14 +65,11 @@
 //   );
 // };
 
-// TailwindCSS
-import TailwindPrac from "./TailwindPrac";
-
 function App() {
   return (
     <>
       {/* Tailwind */}
-      <div className="">
+      {/* <div className="">
         <TailwindPrac label="One" styles="bg-red-200" />
 
         <TailwindPrac
@@ -84,7 +85,12 @@ function App() {
         <div className=" border-4 border-sky-200">four</div>
 
         <div className="border-l-4 border-purple-400 bg-violet-500 ">Five</div>
-      </div>
+      </div> */}
+      {/* End of Tailwind Basics */}
+
+      {/*Buttons  */}
+      <Buttons />
+
       {/* <Title />
       <Title />
       <Title />
